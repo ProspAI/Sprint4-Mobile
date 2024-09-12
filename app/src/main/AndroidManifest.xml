@@ -21,7 +21,7 @@
         <!-- Declare LoginActivity -->
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
+            android:exported="true" />
 
         <!-- Declare MainActivity with LAUNCHER intent-filter -->
         <activity
