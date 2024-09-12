@@ -46,20 +46,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.971" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/prospAiText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="29dp"
+        android:layout_marginBottom="64dp"
         android:fontFamily="@font/lato_regular"
         android:text="ProspAI"
         android:textColor="#FFFFFF"
         android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -81,29 +80,30 @@
         android:id="@+id/loginButton"
         android:layout_width="319dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="#ffff"
+        android:backgroundTint="#25FFFFFF"
         android:fontFamily="@font/lato_regular"
         android:text="Login"
         android:textColor="#000"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/cadastroButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!-- Cadastro Button -->
-    <Button
-        android:id="@+id/cadastroButton"
-        android:layout_width="319dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="#ffffff"
-        android:fontFamily="@font/lato_regular"
-        android:text="Cadastro"
-        android:textColor="#000000"
-        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.908" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ProspAI©"
+        android:textColor="#B5A9A9"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundHomeImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <!-- Cadastro Button -->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

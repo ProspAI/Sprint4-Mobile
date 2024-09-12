@@ -29,10 +29,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Configurar o botão de cadastro
-        val cadastroButton: Button = findViewById(R.id.cadastroButton)
-        cadastroButton.setOnClickListener {
-            val intent = Intent(this, CadastroActivity::class.java)
-            startActivity(intent)
-        }
+
     }
 }
