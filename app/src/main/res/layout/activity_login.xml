@@ -7,6 +7,10 @@
     android:background="#411C5E"
     tools:context=".LoginActivity">
 
+    <!-- Imagem de fundo -->
+
+    <!-- Botão de voltar -->
+
     <ImageView
         android:id="@+id/backgroundLoginImageView"
         android:layout_width="match_parent"
@@ -15,6 +19,19 @@
         android:src="@mipmap/background_login"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="12dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/seta_pa_volta"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundLoginImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.338" />
 
     <TextView
         android:id="@+id/loginTextView"
@@ -31,7 +48,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Adição da Logo -->
-
     <ImageView
         android:id="@+id/logoImageView"
         android:layout_width="115dp"
@@ -133,19 +149,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.932" />
-
-    <!-- Botão de voltar para a tela inicial (activity_main) -->
-    <ImageButton
-        android:id="@+id/backButton"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@mipmap/seta_pa_volta"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/backgroundLoginImageView"
-        app:layout_constraintHorizontal_bias="0.863"
-        app:layout_constraintStart_toEndOf="@+id/backgroundLoginImageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352" />  <!-- Use sua imagem personalizada aqui -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
