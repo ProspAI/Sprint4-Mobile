@@ -3,6 +3,7 @@ package com.example.prospapp
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -10,12 +11,15 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)  // Certifique-se de que o nome do layout XML está correto
+        setContentView(R.layout.activity_login)
 
         // Referência aos campos de email e senha
         val emailEditText = findViewById<EditText>(R.id.emailEditText)
         val passwordEditText = findViewById<EditText>(R.id.passwordEditText)
         val loginButton = findViewById<Button>(R.id.loginButton)
+
+        // Referência ao botão de voltar
+        val backButton = findViewById<ImageButton>(R.id.backButton)
 
         // Lógica de clique do botão de login
         loginButton.setOnClickListener {
@@ -29,6 +33,11 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Email ou senha incorretos!", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        // Configuração do botão de voltar para a tela inicial
+        backButton.setOnClickListener {
+            finish() // Fecha a atividade atual e volta para a anterior
         }
     }
 }
