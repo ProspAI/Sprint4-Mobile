@@ -7,10 +7,6 @@
     android:background="#411C5E"
     tools:context=".LoginActivity">
 
-    <!-- Imagem de fundo -->
-
-    <!-- Botão de voltar -->
-
     <ImageView
         android:id="@+id/backgroundLoginImageView"
         android:layout_width="match_parent"

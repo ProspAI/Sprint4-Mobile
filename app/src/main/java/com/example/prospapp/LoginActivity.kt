@@ -1,5 +1,6 @@
 package com.example.prospapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -29,7 +30,13 @@ class LoginActivity : AppCompatActivity() {
             // Verificação simples de email e senha
             if (email == "teste@gmail.com" && password == "123456") {
                 Toast.makeText(this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show()
-                // Navegar para a próxima atividade ou tela
+
+                // Navegar para a HomeActivity
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+
+                // Finaliza a LoginActivity para que o usuário não possa voltar para ela ao pressionar o botão "Voltar"
+                finish()
             } else {
                 Toast.makeText(this, "Email ou senha incorretos!", Toast.LENGTH_SHORT).show()
             }
