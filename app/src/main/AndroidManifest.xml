@@ -13,6 +13,16 @@
         android:theme="@style/Theme.ProspApp"
         tools:targetApi="31">
 
+        <!-- Declare MainActivity with LAUNCHER intent-filter -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <!-- Declare HomeActivity -->
         <activity
             android:name=".HomeActivity"
@@ -23,15 +33,15 @@
             android:name=".LoginActivity"
             android:exported="true" />
 
-        <!-- Declare MainActivity with LAUNCHER intent-filter -->
+        <!-- Declare AnalysisActivity -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".AnaliseActivity"
+            android:exported="true" />
+
+        <!-- Declare AgendaActivity -->
+        <activity
+            android:name=".AgendaActivity"
+            android:exported="true" />
 
     </application>
 

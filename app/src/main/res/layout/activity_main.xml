@@ -8,21 +8,7 @@
     android:background="#200A30"
     tools:context=".MainActivity">
 
-    <!-- Background ImageView -->
-
-    <!-- Logo ImageView -->
-
-    <!-- Ajustado para mover a logo para baixo -->
-
-    <!-- ProspAI TextView -->
-
-    <!-- Ajustado para mover o texto para baixo -->
-
-    <!-- Seja bem-vindo! TextView -->
-    <!-- Ajustado para evitar que o texto fixe itens superiores -->
-
-    <!-- Login Button -->
-
+    <!-- Existing views -->
     <ImageView
         android:id="@+id/backgroundHomeImageView"
         android:layout_width="match_parent"
@@ -103,7 +89,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.977" />
 
-    <!-- Cadastro Button -->
-
+    <!-- NavHostFragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:navGraph="@navigation/nav_graph"
+        app:defaultNavHost="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
