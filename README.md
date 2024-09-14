@@ -1,3 +1,9 @@
+Estrutura do Projeto no Android Studio
+
+ProspAI/
+
+
+```plaintext
 ├── app/
 │   ├── layout/              # Arquivos XML reutilizáveis para layouts
 │   ├── pages/               # Activities para cada tela (Ex: Home, Analise, etc.)
@@ -21,3 +27,4 @@
 ├── settings.gradle.kts           # Configurações do projeto
 ├── gradle/                       # Wrapper do Gradle
 └── gradlew                       # Script do Gradle wrapper
+```
