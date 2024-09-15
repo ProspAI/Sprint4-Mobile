@@ -1,9 +1,8 @@
+package com.example.prospapp
+
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.prospapp.AnaliseActivity
-import com.example.prospapp.HomeActivity
 import com.example.prospapp.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -16,29 +15,27 @@ class AgendaActivity : AppCompatActivity() {
         // Configurando a BottomNavigationView
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
+        // Marcar "Agenda" como selecionado
+        bottomNavigationView.selectedItemId = R.id.action_agenda
+
         // Definindo listener para tratar cliques nos itens do menu
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
-            try {
-                when (item.itemId) {
-                    R.id.action_home -> {
-                        val intent = Intent(this, HomeActivity::class.java)
-                        startActivity(intent)
-                        true
-                    }
-                    R.id.action_analise -> {
-                        val intent = Intent(this, AnaliseActivity::class.java)
-                        startActivity(intent)
-                        true
-                    }
-                    R.id.action_agenda -> {
-                        // Já estamos na AgendaActivity, então não navegue
-                        true
-                    }
-                    else -> false
+            when (item.itemId) {
+                R.id.action_home -> {
+                    // Navega para a MainActivity
+                    startActivity(Intent(this, MainActivity::class.java))
+                    true
                 }
-            } catch (e: Exception) {
-                Log.e("AgendaActivity", "Error navigating: ${e.message}")
-                false
+                R.id.action_analise -> {
+                    // Navega para a AnaliseActivity
+                    startActivity(Intent(this, AnaliseActivity::class.java))
+                    true
+                }
+                R.id.action_agenda -> {
+                    // Já está na AgendaActivity
+                    true
+                }
+                else -> false
             }
         }
     }

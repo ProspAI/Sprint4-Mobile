@@ -1,6 +1,5 @@
 package com.example.prospapp
 
-import AgendaActivity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Configurar o botão de cadastro
-
+        // Configurar o botão de cadastro, se necessário
     }
 }
