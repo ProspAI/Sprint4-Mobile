@@ -38,7 +38,7 @@
             android:name=".LoginActivity"
             android:exported="true" />
 
-        <!-- Declara a AnalysisActivity -->
+        <!-- Declara a AnaliseActivity -->
         <activity
             android:name=".AnaliseActivity"
             android:exported="true" />
