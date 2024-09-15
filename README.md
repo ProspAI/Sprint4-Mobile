@@ -18,8 +18,8 @@ O **ProspApp** é um aplicativo móvel desenvolvido com Kotlin para Android, que
 ### 2. Credenciais de Acesso
 
 Para testar o aplicativo, você pode usar as seguintes credenciais de login:
-- **Email:** `usuario@example.com`
-- **Senha:** `senha123`
+- **Email:** `teste@gmail.com`
+- **Senha:** `123456`
 
 Essas credenciais devem ser criadas na plataforma de autenticação Firebase ou no seu sistema de backend, conforme configurado.
 
