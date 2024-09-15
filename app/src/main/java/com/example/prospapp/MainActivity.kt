@@ -7,8 +7,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.prospapp.api.RetrofitConfig
+import com.example.prospapp.model.ClienteResponseDTO
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,6 +35,29 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Configurar o botão de cadastro, se necessário
+        // Chama o método fetchClientes ao iniciar a activity
+        fetchClientes()
+    }
+
+    private fun fetchClientes() {
+        // Usa Dispatchers.IO para operações de rede
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                // Faz a chamada de rede usando o Retrofit
+                val response: Response<List<ClienteResponseDTO>> = RetrofitConfig.clienteApiService.getAllClientes()
+
+                if (response.isSuccessful) {
+                    val clientes = response.body()
+                    clientes?.forEach {
+                        println("Cliente: ${it.nome}, Email: ${it.email}")
+                    }
+                } else {
+                    println("Erro ao buscar clientes: ${response.code()}")
+                }
+            } catch (e: Exception) {
+                // Tratar exceções durante a requisição
+                println("Erro ao fazer requisição: ${e.message}")
+            }
+        }
     }
 }

@@ -23,7 +23,7 @@ class AgendaActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.action_home -> {
                     // Navega para a MainActivity
-                    startActivity(Intent(this, MainActivity::class.java))
+                    startActivity(Intent(this, HomeActivity::class.java))
                     true
                 }
                 R.id.action_analise -> {
