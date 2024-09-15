@@ -1,3 +1,73 @@
+# Documentação do Projeto ProspApp
+
+## Visão Geral
+
+O **ProspApp** é um aplicativo móvel desenvolvido com Kotlin para Android, que se integra com uma API para gerenciar clientes, feedbacks, previsões, relatórios, estratégias de vendas e usuários. O aplicativo inclui funcionalidades para login, navegação entre diferentes telas e visualização de dados.
+
+## Como Usar o Aplicativo
+
+### 1. Configuração Inicial
+
+1. **Certifique-se de ter um ambiente Android configurado**:
+   - Android Studio instalado.
+   - SDK do Android configurado.
+
+2. **Adicione o arquivo `google-services.json` (se aplicável)**:
+   - Se estiver usando serviços do Firebase, adicione o arquivo `google-services.json` ao diretório `app` do seu projeto.
+
+### 2. Credenciais de Acesso
+
+Para testar o aplicativo, você pode usar as seguintes credenciais de login:
+- **Email:** `usuario@example.com`
+- **Senha:** `senha123`
+
+Essas credenciais devem ser criadas na plataforma de autenticação Firebase ou no seu sistema de backend, conforme configurado.
+
+### 3. Telas do Aplicativo
+
+O aplicativo possui as seguintes telas:
+
+- **Tela de Login (`LoginActivity`)**
+  - **Descrição:** Tela inicial onde os usuários inserem suas credenciais para acessar o aplicativo.
+  - **Funcionalidade:** Permite login com email e senha. Um botão de login redireciona para a tela principal após a autenticação bem-sucedida.
+
+- **Tela Home (`MainActivity`)**
+  - **Descrição:** Tela principal exibida após o login bem-sucedido.
+  - **Funcionalidade:** Exibe uma visão geral e fornece botões para navegar para outras telas, como Análise e Agenda. O método `fetchClientes` é chamado aqui para listar clientes da API.
+
+- **Tela de Análise (`AnaliseActivity`)**
+  - **Descrição:** Tela dedicada à análise de dados.
+  - **Funcionalidade:** Exibe informações e gráficos relacionados às análises disponíveis.
+
+- **Tela de Agenda (`AgendaActivity`)**
+  - **Descrição:** Tela para gerenciamento de eventos e tarefas.
+  - **Funcionalidade:** Permite visualizar e interagir com itens agendados.
+
+- **Tela de Cadastro (não utilizada)**
+  - **Descrição:** Tela projetada para registro de novos usuários, mas não está incluída no código atual.
+
+### 4. Executar o Projeto
+
+1. **Abra o projeto no Android Studio.**
+2. **Certifique-se de que todas as dependências estão corretamente configuradas e sincronizadas.**
+3. **Execute o aplicativo no emulador ou em um dispositivo físico.**
+
+### 5. Testar a API
+
+Para testar a API, você pode usar ferramentas como Postman ou cURL. Por exemplo, para listar todos os clientes:
+
+```bash
+curl -X GET "https://prospai.azurewebsites.net/api/clientes"
+6. Documentação da API
+Documentação da API: Clientes
+Notas Adicionais
+Segurança: Certifique-se de não expor credenciais sensíveis no código-fonte e use práticas de segurança adequadas para autenticação e autorização.
+Atualizações: Verifique periodicamente se há atualizações no SDK ou nas dependências usadas.
+javascript
+Copiar código
+
+Essa formatação usa a sintaxe Markdown para criar uma estrutura clara e legível para o `README.md`. Você pode ajustar conforme necessário para refletir quaisquer detalhes adicionais ou específicos do seu projeto.
+
 Estrutura do Projeto no Android Studio
 
 ProspAI/
