@@ -8,16 +8,19 @@ O **ProspApp** é um aplicativo móvel desenvolvido com Kotlin para Android, que
 
 ### 1. Configuração Inicial
 
-1. **Certifique-se de ter um ambiente Android configurado**:
-   - Android Studio instalado.
-   - SDK do Android configurado.
+Certifique-se de ter um ambiente Android configurado:
 
-2. **Adicione o arquivo `google-services.json` (se aplicável)**:
-   - Se estiver usando serviços do Firebase, adicione o arquivo `google-services.json` ao diretório `app` do seu projeto.
+- **Android Studio instalado.**
+- **SDK do Android configurado.**
+
+Adicione o arquivo `google-services.json` (se aplicável):
+
+- Se estiver usando serviços do Firebase, adicione o arquivo `google-services.json` ao diretório `app` do seu projeto.
 
 ### 2. Credenciais de Acesso
 
 Para testar o aplicativo, você pode usar as seguintes credenciais de login:
+
 - **Email:** `teste@gmail.com`
 - **Senha:** `123456`
 
@@ -27,30 +30,35 @@ Essas credenciais devem ser criadas na plataforma de autenticação Firebase ou 
 
 O aplicativo possui as seguintes telas:
 
-- **Tela de Login (`LoginActivity`)**
-  - **Descrição:** Tela inicial onde os usuários inserem suas credenciais para acessar o aplicativo.
-  - **Funcionalidade:** Permite login com email e senha. Um botão de login redireciona para a tela principal após a autenticação bem-sucedida.
+#### Tela de Login (`LoginActivity`)
 
-- **Tela Home (`MainActivity`)**
-  - **Descrição:** Tela principal exibida após o login bem-sucedido.
-  - **Funcionalidade:** Exibe uma visão geral e fornece botões para navegar para outras telas, como Análise e Agenda. O método `fetchClientes` é chamado aqui para listar clientes da API.
+- **Descrição:** Tela inicial onde os usuários inserem suas credenciais para acessar o aplicativo.
+- **Funcionalidade:** Permite login com email e senha. Um botão de login redireciona para a tela principal após a autenticação bem-sucedida.
 
-- **Tela de Análise (`AnaliseActivity`)**
-  - **Descrição:** Tela dedicada à análise de dados.
-  - **Funcionalidade:** Exibe informações e gráficos relacionados às análises disponíveis.
+#### Tela Home (`MainActivity`)
 
-- **Tela de Agenda (`AgendaActivity`)**
-  - **Descrição:** Tela para gerenciamento de eventos e tarefas.
-  - **Funcionalidade:** Permite visualizar e interagir com itens agendados.
+- **Descrição:** Tela principal exibida após o login bem-sucedido.
+- **Funcionalidade:** Exibe uma visão geral e fornece botões para navegar para outras telas, como Análise e Agenda. O método `fetchClientes` é chamado aqui para listar clientes da API.
 
-- **Tela de Cadastro (não utilizada)**
-  - **Descrição:** Tela projetada para registro de novos usuários, mas não está incluída no código atual.
+#### Tela de Análise (`AnaliseActivity`)
+
+- **Descrição:** Tela dedicada à análise de dados.
+- **Funcionalidade:** Exibe informações e gráficos relacionados às análises disponíveis.
+
+#### Tela de Agenda (`AgendaActivity`)
+
+- **Descrição:** Tela para gerenciamento de eventos e tarefas.
+- **Funcionalidade:** Permite visualizar e interagir com itens agendados.
+
+#### Tela de Cadastro (não utilizada)
+
+- **Descrição:** Tela projetada para registro de novos usuários, mas não está incluída no código atual.
 
 ### 4. Executar o Projeto
 
-1. **Abra o projeto no Android Studio.**
-2. **Certifique-se de que todas as dependências estão corretamente configuradas e sincronizadas.**
-3. **Execute o aplicativo no emulador ou em um dispositivo físico.**
+1. Abra o projeto no Android Studio.
+2. Certifique-se de que todas as dependências estão corretamente configuradas e sincronizadas.
+3. Execute o aplicativo no emulador ou em um dispositivo físico.
 
 ### 5. Testar a API
 
@@ -59,86 +67,28 @@ Para testar a API, você pode usar ferramentas como Postman ou cURL. Por exemplo
 ```bash
 curl -X GET "https://prospai.azurewebsites.net/api/clientes"
 6. Documentação da API
-Documentação da API: Clientes
-Notas Adicionais
-Segurança: Certifique-se de não expor credenciais sensíveis no código-fonte e use práticas de segurança adequadas para autenticação e autorização.
-Atualizações: Verifique periodicamente se há atualizações no SDK ou nas dependências usadas.
-javascript
-Copiar código
-
-Essa formatação usa a sintaxe Markdown para criar uma estrutura clara e legível para o `README.md`. Você pode ajustar conforme necessário para refletir quaisquer detalhes adicionais ou específicos do seu projeto.
-
-Estrutura do Projeto no Android Studio
-
-ProspAI/
-
-
-```plaintext
-├── app/
-│   ├── layout/              # Arquivos XML reutilizáveis para layouts
-│   ├── pages/               # Activities para cada tela (Ex: Home, Analise, etc.)
-│   ├── schemas/             # Modelos de dados (DTOs, POJOs)
-│   ├── services/            # Lógica de negócios/serviços
-│   ├── utils/               # Funções auxiliares/utilitários
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/example/prospai/
-│   │   │       ├── activities/   # Arquivos das Activities
-│   │   │       ├── fragments/    # Lógica baseada em fragments (se utilizado)
-│   │   │       └── services/     # Classes de serviços
-│   │   ├── res/
-│   │       ├── layout/           # Arquivos XML de layout
-│   │       ├── drawable/         # Imagens e ícones
-│   │       ├── values/           # Strings, cores, dimensões
-│   │       ├── mipmap/           # Ícones do app
-│   ├── AndroidManifest.xml
-├── build.gradle.kts              # Arquivo Gradle baseado em Kotlin
-├── settings.gradle.kts           # Configurações do projeto
-├── gradle/                       # Wrapper do Gradle
-└── gradlew                       # Script do Gradle wrapper
-```
-
-# Documentação da API: Clientes
-
-## Endpoint para Listar Clientes
-
-Este endpoint permite listar todos os clientes cadastrados na base de dados.
-
-### URL
-
-https://prospai.azurewebsites.net/api/clientes
-
-shell
-Copiar código
-
-### Método HTTP
-
-GET
-
-perl
-Copiar código
-
-### Parâmetros
-
+Endpoint para Listar Clientes
+URL: https://prospai.azurewebsites.net/api/clientes
+Método HTTP: GET
+Parâmetros
 Não são necessários parâmetros para esta requisição.
 
-### Cabeçalhos Recomendados
+Cabeçalhos Recomendados
+Content-Type: application/json (Opcional, pois GET não envia dados no corpo)
+Exemplo de Requisição
+Para buscar todos os clientes, use o seguinte comando curl:
 
-- **Content-Type:** `application/json` (Opcional, pois GET não envia dados no corpo)
-
-### Exemplo de Requisição
-
-Para buscar todos os clientes, use o seguinte comando `curl`:
-
-```bash
+bash
+Copiar código
 curl -X GET "https://prospai.azurewebsites.net/api/clientes"
 Respostas
 Código de Status HTTP
+
 200 OK: A requisição foi bem-sucedida e a resposta contém a lista de clientes.
 404 Not Found: O recurso solicitado não foi encontrado.
 500 Internal Server Error: Erro no servidor ao processar a requisição.
 Corpo da Resposta
+
 Se a requisição for bem-sucedida, a resposta será uma lista de objetos JSON representando os clientes. Exemplo de resposta:
 
 json
@@ -173,7 +123,6 @@ scoreEngajamento: Pontuação de engajamento do cliente (número decimal).
 dataCriacao: Data e hora em que o cliente foi criado (string no formato ISO 8601).
 Exemplos de Resposta
 Resposta Bem-Sucedida:
-
 json
 Copiar código
 [
@@ -188,14 +137,12 @@ Copiar código
     }
 ]
 Resposta de Erro 404:
-
 json
 Copiar código
 {
     "error": "Recurso não encontrado"
 }
 Resposta de Erro 500:
-
 json
 Copiar código
 {
@@ -204,7 +151,30 @@ Copiar código
 Notas
 Certifique-se de que o servidor da API esteja ativo e acessível ao fazer a requisição.
 Verifique os logs do servidor caso receba erros inesperados.
-css
+Estrutura do Projeto no Android Studio
+plaintext
 Copiar código
-
-Essa estrutura usa a sintaxe Markdown para organizar a documentação de forma clara e navegável. Adapte os detalhes conforme necessário para refletir com precisão o comportamento real da sua API
+ProspAI/
+├── app/
+│   ├── layout/              # Arquivos XML reutilizáveis para layouts
+│   ├── pages/               # Activities para cada tela (Ex: Home, Analise, etc.)
+│   ├── schemas/             # Modelos de dados (DTOs, POJOs)
+│   ├── services/            # Lógica de negócios/serviços
+│   ├── utils/               # Funções auxiliares/utilitários
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/example/prospai/
+│   │   │       ├── activities/   # Arquivos das Activities
+│   │   │       ├── fragments/    # Lógica baseada em fragments (se utilizado)
+│   │   │       └── services/     # Classes de serviços
+│   │   ├── res/
+│   │       ├── layout/           # Arquivos XML de layout
+│   │       ├── drawable/         # Imagens e ícones
+│   │       ├── values/           # Strings, cores, dimensões
+│   │       ├── mipmap/           # Ícones do app
+│   ├── AndroidManifest.xml
+├── build.gradle.kts              # Arquivo Gradle baseado em Kotlin
+├── settings.gradle.kts           # Configurações do projeto
+├── gradle/                       # Wrapper do Gradle
+└── gradlew                       # Script do Gradle wrapper
