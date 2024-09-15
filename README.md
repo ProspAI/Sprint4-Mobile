@@ -28,20 +28,25 @@ ProspAI/
 ├── gradle/                       # Wrapper do Gradle
 └── gradlew                       # Script do Gradle wrapper
 ```
-Documentação da API: Requisição GET para Listar Clientes
-Descrição
-Esta API retorna uma lista de clientes cadastrados. A requisição usa o método HTTP GET para buscar todos os clientes na base de dados.
+Documentação da API: Clientes
+Endpoint para Listar Clientes
+Este endpoint permite listar todos os clientes cadastrados na base de dados.
 
-Endpoint
-URL: https://prospai.azurewebsites.net/api/clientes
-Método: GET
+URL
+arduino
+Copiar código
+https://prospai.azurewebsites.net/api/clientes
+Método HTTP
+sql
+Copiar código
+GET
 Parâmetros
 Não são necessários parâmetros para esta requisição.
 
 Cabeçalhos Recomendados
 Content-Type: application/json (Opcional, pois GET não envia dados no corpo)
-Exemplo de Requisição com CURL
-Para enviar uma requisição GET e listar todos os clientes, você pode usar o seguinte comando curl:
+Exemplo de Requisição
+Para buscar todos os clientes, use o seguinte comando curl:
 
 bash
 Copiar código
@@ -51,8 +56,8 @@ Código de Status HTTP
 200 OK: A requisição foi bem-sucedida e a resposta contém a lista de clientes.
 404 Not Found: O recurso solicitado não foi encontrado.
 500 Internal Server Error: Erro no servidor ao processar a requisição.
-Corpo da Resposta (Exemplo)
-Se a requisição for bem-sucedida, a resposta será uma lista de objetos JSON representando os clientes. Aqui está um exemplo de corpo de resposta:
+Corpo da Resposta
+Se a requisição for bem-sucedida, a resposta será uma lista de objetos JSON representando os clientes. Exemplo de resposta:
 
 json
 Copiar código
@@ -116,4 +121,4 @@ Copiar código
 }
 Notas
 Certifique-se de que o servidor da API esteja ativo e acessível ao fazer a requisição.
-Verifique os logs do servidor caso receba erros inesperados.
+Verifique os logs do servidor caso receba erros inesperado
