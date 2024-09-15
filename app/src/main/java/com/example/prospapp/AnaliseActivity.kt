@@ -24,7 +24,7 @@ class AnaliseActivity : AppCompatActivity() {
                     true
                 }
                 R.id.action_agenda -> {
-                    startActivity(Intent(this, AgendaActivity::class.java))
+                    startActivity(Intent(this, android.R.drawable.ic_menu_agenda::class.java))
                     true
                 }
                 else -> false

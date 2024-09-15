@@ -3,7 +3,7 @@
     <item
         android:id="@+id/action_analise"
         android:icon="@mipmap/icon_analise"
-    android:title="Análise" />
+        android:title="Análise" />
     <item
         android:id="@+id/action_home"
         android:icon="@mipmap/icon_home"
@@ -11,5 +11,5 @@
     <item
         android:id="@+id/action_agenda"
         android:icon="@mipmap/icon_agenda"
-    android:title="Agenda" />
+        android:title="Agenda" />
 </menu>

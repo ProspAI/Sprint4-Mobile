@@ -40,7 +40,7 @@
 
         <!-- Declare AgendaActivity -->
         <activity
-            android:name=".AgendaActivity"
+            android:name="AgendaActivity"
             android:exported="true" />
 
     </application>
