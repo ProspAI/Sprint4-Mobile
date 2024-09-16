@@ -148,8 +148,7 @@ Notas
 Certifique-se de que o servidor da API esteja ativo e acessível ao fazer a requisição.
 Verifique os logs do servidor caso receba erros inesperados.
 Estrutura do Projeto no Android Studio
-plaintext
-Copiar código
+
 ProspAI/
 ├── app/
 │   ├── layout/              # Arquivos XML reutilizáveis para layouts
