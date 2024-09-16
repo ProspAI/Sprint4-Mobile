@@ -92,7 +92,6 @@ Corpo da Resposta
 Se a requisição for bem-sucedida, a resposta será uma lista de objetos JSON representando os clientes. Exemplo de resposta:
 
 json
-Copiar código
 [
     {
         "id": 1,
@@ -124,7 +123,6 @@ dataCriacao: Data e hora em que o cliente foi criado (string no formato ISO 8601
 Exemplos de Resposta
 Resposta Bem-Sucedida:
 json
-Copiar código
 [
     {
         "id": 1,
@@ -138,13 +136,11 @@ Copiar código
 ]
 Resposta de Erro 404:
 json
-Copiar código
 {
     "error": "Recurso não encontrado"
 }
 Resposta de Erro 500:
 json
-Copiar código
 {
     "error": "Erro interno do servidor"
 }
