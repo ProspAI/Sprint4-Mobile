@@ -151,28 +151,29 @@ Estrutura do Projeto no Android Studio
 
 ProspAI/
 ├── app/
-│   ├── layout/              # Arquivos XML reutilizáveis para layouts
+│   ├── manifests/           # Define a estrutura e configuração principal do app, incluindo permissões, atividades e o ponto de entrada do aplicativo.
 │   ├── pages/               # Activities para cada tela (Ex: Home, Analise, etc.)
-│   ├── schemas/             # Modelos de dados (DTOs, POJOs)
-│   ├── services/            # Lógica de negócios/serviços
-│   ├── utils/               # Funções auxiliares/utilitários
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/example/prospai/
-│   │   │       ├── activities/   # Arquivos das Activities
-│   │   │       ├── fragments/    # Lógica baseada em fragments (se utilizado)
-│   │   │       └── services/     # Classes de serviços
-│   │   ├── res/
-│   │       ├── layout/           # Arquivos XML de layout
-│   │       ├── drawable/         # Imagens e ícones
-│   │       ├── values/           # Strings, cores, dimensões
-│   │       ├── mipmap/           # Ícones do app
-│   ├── AndroidManifest.xml
-├── build.gradle.kts              # Arquivo Gradle baseado em Kotlin
-├── settings.gradle.kts           # Configurações do projeto
-├── gradle/                       # Wrapper do Gradle
-└── gradlew                       # Script do Gradle wrapper
+│   ├── kotlin/              # Código Kotlin, incluindo lógica de negócio e API
+│   │   └── com.example.prospapp/   # Código Kotlin da aplicação
+│   │       ├── api/         # Classes relacionadas à comunicação com APIs
+│   │       ├── model/       # Contém os DTOs (Data Transfer Objects) usados na comunicação com a API
+│   ├── java/                # (Vazia) Reservada para código Java, caso seja necessário no futuro
+│   ├── res/                 # Recursos como layouts XML, drawables, valores
+│   │   ├── layout/          # Arquivos XML de layout
+│   │   ├── drawable/        # Imagens e ícones
+│   │   ├── values/          # Strings, cores, dimensões
+│   │   ├── mipmap/          # Ícones do app
+│   │   ├── color/           # Definições de cores
+│   │   ├── font/            # Fontes usadas no aplicativo
+│   │   ├── menu/            # Menus XML
+│   │   ├── navigation/      # Recursos de navegação (por exemplo, nav_graph.xml)
+│   │   ├── xml/             # Outros arquivos XML personalizados
+├── Gradle Scripts/          # Scripts de configuração do Gradle
+│   ├── build.gradle.kts     # Arquivo Gradle baseado em Kotlin
+│   ├── settings.gradle.kts  # Configurações do projeto
+│   ├── gradle/              # Wrapper do Gradle
+│   └── gradlew              # Script do Gradle wrapper
+
 ```
 
 ### Integrantes 
