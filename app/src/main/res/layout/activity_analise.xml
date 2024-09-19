@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,66 +7,65 @@
     tools:context=".AnaliseActivity">
 
     <ImageButton
-        android:id="@+id/imageButton_seta_baixo4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"
+        android:id="@+id/imageButton14"
+        android:layout_width="164dp"
+        android:layout_height="46dp"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36"
-        app:srcCompat="@mipmap/seta_baixo"
-        app:tint="@android:color/white" />
+        app:layout_constraintVertical_bias="0.414"
+        app:srcCompat="@mipmap/seta_baixo" />
 
     <ImageButton
-        android:id="@+id/imageButton_seta_baixo3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"
+        android:id="@+id/imageButton13"
+        android:layout_width="164dp"
+        android:layout_height="46dp"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintHorizontal_bias="0.10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27"
-        app:srcCompat="@mipmap/seta_baixo"
-        app:tint="@android:color/white" />
+        app:layout_constraintVertical_bias="0.414"
+        app:srcCompat="@mipmap/seta_baixo" />
 
     <ImageButton
-        android:id="@+id/imageButton_seta_baixo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"
+        android:id="@+id/imageButton12"
+        android:layout_width="164dp"
+        android:layout_height="46dp"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36"
-        app:srcCompat="@mipmap/seta_baixo"
-        app:tint="@android:color/white" />
+        app:layout_constraintVertical_bias="0.284"
+        app:srcCompat="@mipmap/seta_baixo" />
 
     <ImageButton
-        android:id="@+id/imageButton_seta_baixo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"
+        android:id="@+id/imageButton11"
+        android:layout_width="164dp"
+        android:layout_height="46dp"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintHorizontal_bias="0.10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27"
-        app:srcCompat="@mipmap/seta_baixo"
-        app:tint="@android:color/white" />
+        app:layout_constraintVertical_bias="0.284"
+        app:srcCompat="@mipmap/seta_baixo" />
+
+    <!-- Outros botões permanecem inalterados -->
 
     <ImageButton
         android:id="@+id/imageButton9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
+        android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
@@ -82,6 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:background="#00FFFFFF"
+        android:scaleType="fitStart"
         app:layout_constraintBottom_toTopOf="@+id/search_edit_text"
         app:layout_constraintEnd_toStartOf="@+id/textView3"
         app:layout_constraintHorizontal_bias="0.17"
@@ -97,6 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
+        android:scaleType="fitStart"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.957"
@@ -123,7 +123,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.113" />
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -137,19 +136,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_navigation_menu"
         tools:ignore="MissingConstraints" />
-
-    <!-- Texto Pesquisar com cor personalizada -->
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pesquisar"
-        android:textColor="#2D0A48"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_edit_text"
-        app:layout_constraintVertical_bias="0.389" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
