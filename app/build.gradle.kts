@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("com.google.gms.google-services") // Adiciona o plugin do Google Services
 }
 
 android {
@@ -54,6 +55,9 @@ dependencies {
 
     // Logging para Retrofit (opcional, mas útil para debug)
     implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+
+    // Firebase Authentication
+    implementation("com.google.firebase:firebase-auth:22.0.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
