@@ -150,6 +150,7 @@ Verifique os logs do servidor caso receba erros inesperados.
 Estrutura do Projeto no Android Studio
 
 ProspAI/
+├── .idea                    # Configurações e preferências específicas do projeto no IDE.
 ├── app/
 │   ├── manifests/           # Define a estrutura e configuração principal do app, incluindo permissões, atividades e o ponto de entrada do aplicativo.
 │   ├── pages/               # Activities para cada tela (Ex: Home, Analise, etc.)
