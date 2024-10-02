@@ -154,20 +154,19 @@ ProspAI/
 ├── app/
 │   ├── manifests/           # Define a estrutura e configuração principal do app, incluindo permissões, atividades e o ponto de entrada do aplicativo.
 │   ├── pages/               # Activities para cada tela (Ex: Home, Analise, etc.)
-│   ├── kotlin/              # Código Kotlin, incluindo lógica de negócio e API
+│   ├── kotlin + java /      # Código Kotlin, incluindo lógica de negócio e API
 │   │   └── com.example.prospapp/   # Código Kotlin da aplicação
 │   │       ├── api/         # Classes relacionadas à comunicação com APIs
 │   │       ├── model/       # Contém os DTOs (Data Transfer Objects) usados na comunicação com a API
-│   ├── java/                # (Vazia) Reservada para código Java, caso seja necessário no futuro
 │   ├── res/                 # Recursos como layouts XML, drawables, valores
-│   │   ├── layout/          # Arquivos XML de layout
-│   │   ├── drawable/        # Imagens e ícones
-│   │   ├── values/          # Strings, cores, dimensões
-│   │   ├── mipmap/          # Ícones do app
 │   │   ├── color/           # Definições de cores
+│   │   ├── drawable/        # Imagens e ícones
 │   │   ├── font/            # Fontes usadas no aplicativo
+│   │   ├── layout/          # Arquivos XML de layout
 │   │   ├── menu/            # Menus XML
+│   │   ├── mipmap/          # Ícones do app
 │   │   ├── navigation/      # Recursos de navegação (por exemplo, nav_graph.xml)
+│   │   ├── values/          # Strings, cores, dimensões
 │   │   ├── xml/             # Outros arquivos XML personalizados
 ├── Gradle Scripts/          # Scripts de configuração do Gradle
 │   ├── build.gradle.kts     # Arquivo Gradle baseado em Kotlin
