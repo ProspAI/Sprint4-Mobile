@@ -56,10 +56,19 @@ dependencies {
     // Logging para Retrofit (opcional, mas útil para debug)
     implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
 
+    // Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
+
+    // Firebase Analytics
+    implementation("com.google.firebase:firebase-analytics")
+
     // Firebase Authentication
-    implementation("com.google.firebase:firebase-auth:22.0.0")
+    implementation("com.google.firebase:firebase-auth")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
+// Adiciona o plugin do Google Services no final (opcional, se já estiver no bloco plugins)
+apply(plugin = "com.google.gms.google-services")
