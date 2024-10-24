@@ -40,7 +40,7 @@
 
         <!-- Declara a AnaliseActivity -->
         <activity
-            android:name=".AnaliseActivity"
+            android:name="AnaliseActivity"
             android:exported="true" />
 
         <!-- Declara a AgendaActivity -->
@@ -48,6 +48,9 @@
             android:name=".AgendaActivity"
             android:exported="true" />
 
+        <activity
+            android:name=".UserActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

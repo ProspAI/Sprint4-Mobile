@@ -7,12 +7,18 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        // Inicializando o Firebase Auth
+        auth = FirebaseAuth.getInstance()
 
         // Referência aos campos de email e senha
         val emailEditText = findViewById<EditText>(R.id.emailEditText)
@@ -27,18 +33,11 @@ class LoginActivity : AppCompatActivity() {
             val email = emailEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()
 
-            // Verificação simples de email e senha
-            if (email == "teste@gmail.com" && password == "123456") {
-                Toast.makeText(this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show()
-
-                // Navegar para a HomeActivity
-                val intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
-
-                // Finaliza a LoginActivity para que o usuário não possa voltar para ela ao pressionar o botão "Voltar"
-                finish()
+            // Verificando se os campos estão preenchidos
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                loginUser(email, password)
             } else {
-                Toast.makeText(this, "Email ou senha incorretos!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Por favor, preencha todos os campos!", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -46,5 +45,22 @@ class LoginActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             finish() // Fecha a atividade atual e volta para a anterior
         }
+    }
+
+    private fun loginUser(email: String, password: String) {
+        // Autenticar usuário com Firebase
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Login bem-sucedido, navegue para a HomeActivity
+                    Toast.makeText(this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                    finish() // Finaliza a LoginActivity
+                } else {
+                    // Se o login falhar, mostre uma mensagem ao usuário
+                    Toast.makeText(this, "Email ou senha incorretos!", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }
