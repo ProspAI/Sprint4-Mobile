@@ -1,7 +1,9 @@
 package com.example.prospapp
 
+import AnaliseActivity
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -16,6 +18,7 @@ class HomeActivity : AppCompatActivity() {
         // Define o item "Home" como selecionado ao carregar a tela
         bottomNavigationView.selectedItemId = R.id.action_home
 
+        // Configuração do listener de navegação
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_home -> {
@@ -32,6 +35,16 @@ class HomeActivity : AppCompatActivity() {
                 }
                 else -> false
             }
+        }
+
+        // Referência ao ImageButton
+        val imageButton3: ImageButton = findViewById(R.id.imageButton3)
+
+        // Configurando o OnClickListener para o ImageButton
+        imageButton3.setOnClickListener {
+            // Inicia a UserActivity
+            val intent = Intent(this, UserActivity::class.java)
+            startActivity(intent)
         }
     }
 }

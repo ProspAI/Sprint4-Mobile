@@ -1,9 +1,12 @@
 package com.example.prospapp
 
+import AnaliseActivity
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import com.example.prospapp.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class AgendaActivity : AppCompatActivity() {
@@ -22,7 +25,7 @@ class AgendaActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_home -> {
-                    // Navega para a MainActivity
+                    // Navega para a HomeActivity
                     startActivity(Intent(this, HomeActivity::class.java))
                     true
                 }
@@ -37,6 +40,16 @@ class AgendaActivity : AppCompatActivity() {
                 }
                 else -> false
             }
+        }
+
+        // Referência ao ImageButton com ID imageButton4
+        val imageButton4: ImageButton = findViewById(R.id.imageButton4)
+
+        // Configurando o OnClickListener para o ImageButton
+        imageButton4.setOnClickListener {
+            // Inicia a UserActivity
+            val intent = Intent(this, UserActivity::class.java)
+            startActivity(intent)
         }
     }
 }
