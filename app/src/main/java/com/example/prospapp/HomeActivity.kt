@@ -42,7 +42,7 @@ class HomeActivity : AppCompatActivity() {
 
         // Configurando o OnClickListener para o ImageButton
         imageButton3.setOnClickListener {
-            // Inicia a UserActivity
+            // Inicia a com.example.prospapp.UserActivity
             val intent = Intent(this, UserActivity::class.java)
             startActivity(intent)
         }

@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+
 
 class UserActivity : AppCompatActivity() {
 
@@ -27,7 +29,9 @@ class UserActivity : AppCompatActivity() {
         changePasswordButton.setOnClickListener {
             val newPassword = newPasswordEditText.text.toString().trim()
             if (newPassword.isNotEmpty()) {
-                changePassword(newPassword)
+                showConfirmationDialog("Alterar Senha", "Deseja fazer essa alteração?") {
+                    changePassword(newPassword)
+                }
             } else {
                 Toast.makeText(this, "Por favor, insira uma nova senha!", Toast.LENGTH_SHORT).show()
             }
@@ -35,8 +39,24 @@ class UserActivity : AppCompatActivity() {
 
         // Configuração do botão para excluir a conta
         deleteAccountButton.setOnClickListener {
-            deleteAccount()
+            showConfirmationDialog("Excluir Conta", "Deseja realmente excluir sua conta?") {
+                deleteAccount()
+            }
         }
+    }
+
+    private fun showConfirmationDialog(title: String, message: String, onConfirm: () -> Unit) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle(title)
+            .setMessage(message)
+            .setPositiveButton("Sim") { dialog, _ ->
+                onConfirm()
+                dialog.dismiss()
+            }
+            .setNegativeButton("Não") { dialog, _ ->
+                dialog.dismiss()
+            }
+        builder.create().show()
     }
 
     private fun changePassword(newPassword: String) {
@@ -62,8 +82,7 @@ class UserActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "Conta excluída com sucesso!", Toast.LENGTH_SHORT).show()
-                        // Voltar para a tela de login ou inicial
-                        finish() // Encerra a UserActivity
+                        finish() // Encerra a com.example.prospapp.UserActivity
                     } else {
                         Toast.makeText(this, "Erro ao excluir a conta!", Toast.LENGTH_SHORT).show()
                     }

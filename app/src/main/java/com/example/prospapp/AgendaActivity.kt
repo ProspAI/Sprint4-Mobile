@@ -3,8 +3,6 @@ package com.example.prospapp
 import AnaliseActivity
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -47,7 +45,7 @@ class AgendaActivity : AppCompatActivity() {
 
         // Configurando o OnClickListener para o ImageButton
         imageButton4.setOnClickListener {
-            // Inicia a UserActivity
+            // Inicia a com.example.prospapp.UserActivity
             val intent = Intent(this, UserActivity::class.java)
             startActivity(intent)
         }
