@@ -25,6 +25,9 @@ class LoginActivity : AppCompatActivity() {
         val passwordEditText = findViewById<EditText>(R.id.passwordEditText)
         val loginButton = findViewById<Button>(R.id.loginButton)
 
+        // Referência ao botão "Cadastre-se"
+        val registerButton = findViewById<Button>(R.id.loginButton2)
+
         // Referência ao botão de voltar
         val backButton = findViewById<ImageButton>(R.id.backButton)
 
@@ -39,6 +42,12 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Por favor, preencha todos os campos!", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        // Configuração do botão de "Cadastre-se" para redirecionar à tela de cadastro
+        registerButton.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
 
         // Configuração do botão de voltar para a tela inicial
