@@ -1,6 +1,5 @@
 package com.example.prospapp
 
-import AnaliseActivity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
@@ -14,11 +13,8 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
-
-        // Define o item "Home" como selecionado ao carregar a tela
         bottomNavigationView.selectedItemId = R.id.action_home
 
-        // Configuração do listener de navegação
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_home -> {
@@ -26,25 +22,26 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.action_analise -> {
-                    startActivity(Intent(this, AnaliseActivity::class.java))
+                    val intent = Intent(this, AnaliseActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(intent)
+                    finish()
                     true
                 }
                 R.id.action_agenda -> {
-                    startActivity(Intent(this, AgendaActivity::class.java))
+                    val intent = Intent(this, AgendaActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(intent)
+                    finish()
                     true
                 }
                 else -> false
             }
         }
 
-        // Referência ao ImageButton
         val imageButton3: ImageButton = findViewById(R.id.imageButton3)
-
-        // Configurando o OnClickListener para o ImageButton
         imageButton3.setOnClickListener {
-            // Inicia a com.example.prospapp.UserActivity
-            val intent = Intent(this, UserActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, UserActivity::class.java))
         }
     }
 }

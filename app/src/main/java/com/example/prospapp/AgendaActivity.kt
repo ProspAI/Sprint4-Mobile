@@ -1,6 +1,5 @@
 package com.example.prospapp
 
-import AnaliseActivity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
@@ -13,41 +12,36 @@ class AgendaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_agenda)
 
-        // Configurando a BottomNavigationView
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-
-        // Marcar "Agenda" como selecionado
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
         bottomNavigationView.selectedItemId = R.id.action_agenda
 
-        // Definindo listener para tratar cliques nos itens do menu
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_home -> {
-                    // Navega para a HomeActivity
-                    startActivity(Intent(this, HomeActivity::class.java))
+                    val intent = Intent(this, HomeActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(intent)
+                    finish()
                     true
                 }
                 R.id.action_analise -> {
-                    // Navega para a AnaliseActivity
-                    startActivity(Intent(this, AnaliseActivity::class.java))
+                    val intent = Intent(this, AnaliseActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(intent)
+                    finish()
                     true
                 }
                 R.id.action_agenda -> {
-                    // Já está na AgendaActivity
+                    // Agenda está na tela atual, não faz nada
                     true
                 }
                 else -> false
             }
         }
 
-        // Referência ao ImageButton com ID imageButton4
         val imageButton4: ImageButton = findViewById(R.id.imageButton4)
-
-        // Configurando o OnClickListener para o ImageButton
         imageButton4.setOnClickListener {
-            // Inicia a com.example.prospapp.UserActivity
-            val intent = Intent(this, UserActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, UserActivity::class.java))
         }
     }
 }
