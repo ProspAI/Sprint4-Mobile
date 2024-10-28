@@ -44,4 +44,6 @@
     </string>
     <string name="filtro">Filtro</string>
     <string name="gerar">Gerar</string>
+    <string name="nome">Nome</string>
+    <string name="email">Email</string>
 </resources>

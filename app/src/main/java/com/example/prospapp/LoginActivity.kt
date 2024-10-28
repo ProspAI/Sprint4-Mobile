@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -20,13 +21,19 @@ class LoginActivity : AppCompatActivity() {
         // Inicializando o Firebase Auth
         auth = FirebaseAuth.getInstance()
 
-        // Referência aos campos de email e senha
+        // Referências aos campos de email e senha
         val emailEditText = findViewById<EditText>(R.id.emailEditText)
         val passwordEditText = findViewById<EditText>(R.id.passwordEditText)
         val loginButton = findViewById<Button>(R.id.loginButton)
 
+        // Referência ao botão "Cadastre-se"
+        val registerButton = findViewById<Button>(R.id.loginButton2)
+
         // Referência ao botão de voltar
         val backButton = findViewById<ImageButton>(R.id.backButton)
+
+        // Referência ao texto "Esqueceu a senha?"
+        val forgotPasswordTextView = findViewById<TextView>(R.id.forgotPasswordTextView)
 
         // Lógica de clique do botão de login
         loginButton.setOnClickListener {
@@ -41,9 +48,21 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
+        // Configuração do botão de "Cadastre-se" para redirecionar à tela de cadastro
+        registerButton.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
         // Configuração do botão de voltar para a tela inicial
         backButton.setOnClickListener {
             finish() // Fecha a atividade atual e volta para a anterior
+        }
+
+        // Configuração do texto "Esqueceu a senha?"
+        forgotPasswordTextView.setOnClickListener {
+            // Inicia a tela de recuperação de senha
+            startActivity(Intent(this, RecoverPasswordActivity::class.java))
         }
     }
 

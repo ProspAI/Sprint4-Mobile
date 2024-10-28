@@ -1,5 +1,6 @@
 package com.example.prospapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -7,7 +8,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-
 
 class UserActivity : AppCompatActivity() {
 
@@ -82,7 +82,8 @@ class UserActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "Conta excluída com sucesso!", Toast.LENGTH_SHORT).show()
-                        finish() // Encerra a com.example.prospapp.UserActivity
+                        startActivity(Intent(this, MainActivity::class.java)) // Inicia a MainActivity
+                        finish() // Encerra a UserActivity
                     } else {
                         Toast.makeText(this, "Erro ao excluir a conta!", Toast.LENGTH_SHORT).show()
                     }
