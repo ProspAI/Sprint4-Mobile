@@ -177,6 +177,7 @@ ProspAI/
 ├── settings.gradle.kts              # Configurações do projeto.
 ├── gradle/                          # Wrapper do Gradle.
 │   └── wrapper                      # Script do Gradle wrapper.
+├── README.md
 
 ```
 
