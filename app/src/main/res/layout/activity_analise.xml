@@ -219,7 +219,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded2_button"
         android:fontFamily="@font/lato_regular"
-        android:text="salvar"
+        android:text="Salvar"
         android:textColor="#63417D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
