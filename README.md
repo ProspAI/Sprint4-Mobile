@@ -152,27 +152,31 @@ Estrutura do Projeto no Android Studio
 ProspAI/
 ├── .idea                    # Configurações e preferências específicas do projeto no IDE.
 ├── app/
-│   ├── manifests/           # Define a estrutura e configuração principal do app, incluindo permissões, atividades e o ponto de entrada do aplicativo.
-│   ├── pages/               # Activities para cada tela (Ex: Home, Analise, etc.)
-│   ├── kotlin + java /      # Código Kotlin, incluindo lógica de negócio e API
-│   │   └── com.example.prospapp/   # Código Kotlin da aplicação
-│   │       ├── api/         # Classes relacionadas à comunicação com APIs
-│   │       ├── model/       # Contém os DTOs (Data Transfer Objects) usados na comunicação com a API
-│   ├── res/                 # Recursos como layouts XML, drawables, valores
-│   │   ├── color/           # Definições de cores
-│   │   ├── drawable/        # Imagens e ícones
-│   │   ├── font/            # Fontes usadas no aplicativo
-│   │   ├── layout/          # Arquivos XML de layout
-│   │   ├── menu/            # Menus XML
-│   │   ├── mipmap/          # Ícones do app
-│   │   ├── navigation/      # Recursos de navegação (por exemplo, nav_graph.xml)
-│   │   ├── values/          # Strings, cores, dimensões
-│   │   ├── xml/             # Outros arquivos XML personalizados
-├── Gradle Scripts/          # Scripts de configuração do Gradle
-│   ├── build.gradle.kts     # Arquivo Gradle baseado em Kotlin
-│   ├── settings.gradle.kts  # Configurações do projeto
-│   ├── gradle/              # Wrapper do Gradle
-│   └── gradlew              # Script do Gradle wrapper
+│   ├── build/               # Gerada pelo Gradle durante o processo de build.
+│   ├── src/
+│   │   ├── androidTest/     # Usada para armazenar os testes instrumentados.
+│   │   ├── main/
+│   │   │   ├── java/          # Código Java/Kotlin, incluindo lógica de negócio e APIs.
+│   │   │   │   └── com.example.prospapp/ # A pasta contém o código Java/Kotlin da aplicação e pastas para as APIs e os modelos utilizados na aplicação.
+│   │   │   │       ├── api/         # Classes relacionadas à comunicação com APIs.
+│   │   │   │       ├── model/       # Contém os DTOs usados na comunicação com a API.
+│   │   │   ├── res/                 # Recursos do aplicativo.
+│   │   │   │   ├── color/           # Definições de cores.
+│   │   │   │   ├── drawable/        # Imagens e ícones.
+│   │   │   │   ├── font/            # Fontes usadas no aplicativo.
+│   │   │   │   ├── layout/          # Arquivos XML de layout.
+│   │   │   │   ├── menu/            # Menus XML.
+│   │   │   │   ├── mipmap/          # Ícones do app.
+│   │   │   │   ├── navigation/      # Recursos de navegação.
+│   │   │   │   ├── values/          # Strings, cores, dimensões.
+│   │   │   │   ├── xml/             # Outros arquivos XML personalizados.
+│   │   ├── test/                    # Usada para armazenar testes unitários no Android.
+│   │   │   ├── AndroidManifest/     # Define a estrutura e configuração principal do app.
+├── gradle/                          # Scripts de configuração do Gradle.
+├── build.gradle.kts                 # Arquivo Gradle baseado em Kotlin.
+├── settings.gradle.kts              # Configurações do projeto.
+├── gradle/                          # Wrapper do Gradle.
+│   └── wrapper                      # Script do Gradle wrapper.
 
 ```
 
